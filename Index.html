@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        #fact-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Python Fun Facts</h1>
+    <button onclick="showFact()">Show a Fun Fact</button>
+    <div id="fact-container"></div>
+
+    <script>
+        const funFacts = [
+            {
+                fact: "Named After Monty Python",
+                description: "Python is named after the British comedy series 'Monty Python's Flying Circus,' not the snake. Guido van Rossum, the creator of Python, was a fan of the show."
+            },
+            {
+                fact: "Open Source",
+                description: "Python is an open-source language, which means anyone can contribute to its development and use it for free."
+            },
+            {
+                fact: "Versatile Language",
+                description: "Python is used in various fields, including web development, data science, artificial intelligence, scientific computing, and more."
+            },
+            {
+                fact: "Readable Syntax",
+                description: "Python is known for its easy-to-read syntax, which resembles English, making it a great choice for beginners."
+            },
+            {
+                fact: "Extensive Libraries",
+                description: "Python has a vast collection of libraries and frameworks, such as NumPy, Pandas, Django, and Flask, which extend its capabilities."
+            },
+            {
+                fact: "Cross-Platform",
+                description: "Python is cross-platform, meaning it can run on different operating systems like Windows, macOS, and Linux without modification."
+            },
+            {
+                fact: "Popular in Academia",
+                description: "Python is widely used in academia for research and teaching due to its simplicity and powerful libraries."
+            },
+            {
+                fact: "Guido van Rossum",
+                description: "The creator of Python, Guido van Rossum, is often referred to as Python's 'Benevolent Dictator For Life' (BDFL), although he stepped down from this role in 2018."
+            },
+            {
+                fact: "Dynamic Typing",
+                description: "Python uses dynamic typing, which means you don't need to declare the type of a variable when you create one."
+            },
+            {
+                fact: "Community Support",
+                description: "Python has a large and active community, which contributes to its continuous improvement and provides extensive support for developers."
+            }
+        ];
+
+        function showFact() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            const fact = funFacts[randomIndex];
+            document.getElementById('fact-container').innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+        }
+    </script>
+
+</body>
+</html>
